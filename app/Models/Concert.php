@@ -17,4 +17,10 @@ class Concert extends Model
         $this->date->setlocale(LC_TIME, 'pt_BR');
         return $this->date->format('F j, Y');
     }
+
+    public function getFormattedStartTimeAttribute()
+    {
+
+        return $this->date->format('g:ia');
+    }
 }
